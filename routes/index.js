@@ -1,14 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-module.exports = function(){
-    router.get('/',(req,res)=>{
-        res.send('Home');
-    });
+const homeController = require('../controllers/homeControllers')
 
-    router.get('/productos',(req,res)=>{
-        res.send('productos');
-    });
+module.exports = function(){
+    router.get('/',homeController.Home);
+    router.get('/productos',homeController.Productos);
+
+   
 
     return router;
 };
