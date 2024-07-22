@@ -1,5 +1,5 @@
 exports.Home = (req,res)=>{
-    res.send('mama');
+    res.render('Home');
 }
 
 exports.Productos = (req,res)=>{
